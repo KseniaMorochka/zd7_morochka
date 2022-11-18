@@ -1,9 +1,12 @@
 package com.example.myapplication
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
-
-data class Crime(@PrimaryKey var id: UUID = UUID.randomUUID()) {
-    var title:String = ""
+@Entity
+data class Crime(@PrimaryKey val id: UUID = UUID.randomUUID(),var title:String = "", var date: Date = Date(),  var isSolved: Boolean = false,
+                 var _requiresPolice:Boolean = false) {
+    /*var title:String = ""
     var date: Date? = null
     var isSolved: Boolean? = null
     var requiresPolice: Int?=0
@@ -14,5 +17,6 @@ data class Crime(@PrimaryKey var id: UUID = UUID.randomUUID()) {
         this.isSolved=isSolved
         this.requiresPolice=requiresPolice
     }
+     */
 }
-annotation class PrimaryKey
+
