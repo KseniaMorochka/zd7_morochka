@@ -37,5 +37,22 @@
         android:layout_height="wrap_content"
         android:text="@string/crime_solved_label">
     </CheckBox>
+    <Button
+        android:id="@+id/choosesuspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="выбор подозреваемого"
+        android:background = "@color/blue"
+
+        >
+    </Button>
+    <Button
+        android:id="@+id/sendcrimereport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="отправить отчет"
+        android:background = "@color/blue"
+        android:layout_marginTop="20dp">
+    </Button>
 
 </LinearLayout>

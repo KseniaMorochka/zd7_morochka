@@ -3,9 +3,9 @@ package com.example.myapplication
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.Room
-import com.example.myapplication.Crime
 import database.CrimeDatabase
-import java.util.UUID
+import database.migration_1_2
+import java.util.*
 import java.util.concurrent.Executors
 
 private  const val DATABASE_NAME ="crimedatabase"
@@ -16,7 +16,8 @@ class CrimeRepository private constructor(context:Context){
         context.applicationContext,
         CrimeDatabase::class.java,
         DATABASE_NAME
-    ).build()
+    ).addMigrations(migration_1_2)
+        .build()
 
     private val crimeDao = database.crimeDao()
     private val executor = Executors.newSingleThreadExecutor()

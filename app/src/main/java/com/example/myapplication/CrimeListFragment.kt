@@ -28,7 +28,6 @@ class CrimeListFragment : Fragment() {
     private var adapter: CrimeAdapter? = CrimeAdapter(emptyList())
     private val crimeListViewModel:CrimeListViewModel by lazy{
         ViewModelProviders.of(this).get(CrimeListViewModel::class.java)
-
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)
